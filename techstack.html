@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om Patel - Tech Stack</title>
+    <link rel="icon" href="icon-32x32.png" type="image/x-icon">
     <style>
+        @font-face {
+            font-family: "Lato";
+            src: url(Lato-Regular.ttf) format("truetype");
+        }
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: "Lato", Verdana, Tahoma;
             background-color: #ffffff; /* White background */
             color: #333; /* Dark text color */
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column; /* Align content in a column */
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -43,6 +49,19 @@
             margin-top: 20px;
             font-size: 12px;
         }
+        .return-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .return-button:hover {
+            background-color: #555;
+        }
     </style>    
 </head>
 <body>
@@ -66,11 +85,12 @@
 </section>
 
 <section>
-    <h2 class="section-title">Frameworks</h2>
+    <h2 class="section-title">Framework/Database</h2>
     <ul class="tech-list">
         <li>MongoDB</li>
         <li>PostgreSQL</li>
         <li>MySQL</li>
+        <li>OWASP</li>
     </ul>
 </section>
 
@@ -85,11 +105,13 @@
 </section>
 
 <section>
-    <h2 class="section-title">ML/Data Science</h2>
+    <h2 class="section-title">Libraries</h2>
     <ul class="tech-list">
         <li>NumPy</li>
         <li>Pandas</li>
         <li>Matplotlib</li>
+        <li>Plotly</li>
+        <li>Pygame</li>
         <!-- Add more ML/Data Science tools as needed -->
     </ul>
 </section>
@@ -97,6 +119,8 @@
 <div class="updated-info">
     <p>Last Updated: 14/08/23</p>
 </div>
+
+<button class="return-button" onclick="window.location.href = 'index.html';">Return to Main</button>
 
 </div>
 
