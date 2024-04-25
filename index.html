@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om Patel - Portfolio</title>
+    <link rel="icon" href="icon-32x32.png" type="image/x-icon">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             background-color: #ffffff; /* White background */
             color: #333; /* Dark text color */
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
         }
         header {
             background-color: #333; /* Dark background for header */
             color: #fff; /* White text color for header */
-            padding: 20px;
-            text-align: center;
+            padding: 15px;
         }
         .profile-info {
-            text-align: center;
             margin-top: 20px;
         }
         .role {
@@ -27,25 +36,38 @@
         }
         .previous-experience {
             margin-top: 30px;
-            text-align: center;
         }
         .social-links {
-            text-align: center;
             margin-top: 30px;
         }
         .social-links a {
             text-decoration: none;
             color: #333; /* Dark text color for navigation */
-            padding: 0 10px;
+            padding: 10 10px;
+            position: relative; /* Make the position relative for pseudo-element */
+        }
+        .social-links a + a {
+        margin-left: 8px; /* Add a small gap between links */
+        }
+        .social-links a:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1px; /* Adjust the position of the underline */
+            height: 0.5px; /* Adjust the height of the underline */
+            background-color: #333; /* Color of the underline */
+            margin: 0 auto; /* Center the underline */
         }
         .updated-info {
-            text-align: center;
             margin-top: 20px;
             font-size: 12px;
         }
-    </style>
+    </style>    
 </head>
 <body>
+
+<div class="container">
 
 <header>
     <h1>Om Patel</h1>
@@ -60,21 +82,23 @@
     <h2>Previous Endeavors</h2>
     <ul>
         <li>Contributed to open-source projects on GitHub</li>
-        <li>Designed and developed custom websites for small businesses</li>
-        <li>Participated in hackathons and won awards for innovative projects</li>
-        <li>Collaborated with local charities to build web applications for fundraising</li>
+        <li>Maintained several databases for small businesses</li>
+        <li>Participated in competitions and won awards for innovative projects</li>
+        <li>Collaborated with local charities to build web applications for promotions</li>
     </ul>
 </div>
 
 <div class="social-links">
-    <a href="#">Github</a>
-    <a href="#">Twitter</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">YouTube</a>
+    <a href="https://github.com/omhpatel7">Github</a>
+    <a href="https://www.linkedin.com/in/om-patel-16m/">LinkedIn</a>
+    <a href="Resume_Template.pdf">Resume</a>
+    <a href="projects.html">Projects</a>
 </div>
 
 <div class="updated-info">
     <p>Last Updated: 14/08/23</p>
+</div>
+
 </div>
 
 </body>
