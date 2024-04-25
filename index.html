@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Patel</title>
+    <title>Om Patel - Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,30 +18,30 @@
             padding: 20px;
             text-align: center;
         }
-        nav {
-            background-color: #f4f4f4; /* Light gray background for navigation */
-            padding: 10px;
+        .profile-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .role {
+            font-weight: bold;
+        }
+        .previous-experience {
+            margin-top: 30px;
             text-align: center;
         }
-        nav a {
+        .social-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .social-links a {
             text-decoration: none;
             color: #333; /* Dark text color for navigation */
-            padding: 10px 20px;
+            padding: 0 10px;
         }
-        nav a:hover {
-            background-color: #ddd; /* Light gray background on hover */
-        }
-        section {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333; /* Dark background for footer */
-            color: #fff; /* White text color for footer */
+        .updated-info {
             text-align: center;
-            padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin-top: 20px;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -51,30 +51,31 @@
     <h1>Om Patel</h1>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-</nav>
+<div class="profile-info">
+    <p><span class="role">Computer Science</span> @ McMaster University</p>
+    <p><span class="role">Marketing VP</span> @ McMaster's Software Engineering Society</p>
+</div>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>This is where you can write a brief introduction about yourself.</p>
-</section>
+<div class="previous-experience">
+    <h2>Previous Endeavors</h2>
+    <ul>
+        <li>Contributed to open-source projects on GitHub</li>
+        <li>Designed and developed custom websites for small businesses</li>
+        <li>Participated in hackathons and won awards for innovative projects</li>
+        <li>Collaborated with local charities to build web applications for fundraising</li>
+    </ul>
+</div>
 
-<section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>This is where you can showcase your projects and works.</p>
-</section>
+<div class="social-links">
+    <a href="#">Github</a>
+    <a href="#">Twitter</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">YouTube</a>
+</div>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>You can reach me at myemail@example.com</p>
-</section>
-
-<footer>
-    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-</footer>
+<div class="updated-info">
+    <p>Last Updated: 14/08/23</p>
+</div>
 
 </body>
 </html>
