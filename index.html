@@ -30,11 +30,15 @@
             width: 100%;
             padding: 20px;
         }
-        header {
+        .header-background {
+            background-color: #333; /* Background color for header */
+            padding: 5px; /* Add padding to make the text more readable */
+            width: 100%; /* Stretch the header across the entire width */
+            box-sizing: content-box; /* Include padding and border in the width */
+            text-align: center; /* Center-align the text */
+            color: #fff; /* White text color for header */
             font-family: "Vonique";
-            font-size: x-large;
-            color: #333; /* White text color for header */
-            text-align: left;
+            font-size: xxx-large;
         }
         footer {
             font-family: "Lato";
@@ -91,9 +95,9 @@
 
 <div class="container">
 
-<header>
-    <h1>Om🢒Patel</h1>
-</header>
+<div class="header-background">
+    Om🢒Patel
+</div>
 
 <div class="profile-info">
     <p><span class="role">Computer Science</span> @ McMaster University</p>
