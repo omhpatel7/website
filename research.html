@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Patel | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            background: 
+                url('wallpaper.jpg') center/cover no-repeat;
+                
+        }
+
+        .name {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-family: 'Raleway', sans-serif, bold;
+            font-weight: 700;
+            background: linear-gradient(45deg, #2b2d42, #4a4e69);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #4a4e69;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #2b2d42;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #4a4e69;
+        }
+
+        /* Project Cards */
+        .projects-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .project-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Research Content */
+        .research-content {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .research-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .research-content li {
+            margin-bottom: 1rem;
+        }
+
+        .research-content a {
+            color: #4a4e69;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .research-content a:hover {
+            color: #2b2d42;
+        }
+
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tech-item {
+            background: #e9ecef;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .name {
+                font-size: 3rem;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<!-- For Raleway -->
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<body>
+    <header class="header animate">
+        <h1 class="name">Om Patel</h1>
+        <nav class="social-links">
+            <a href="https://github.com/omhpatel7" class="social-link" target="_blank">
+                <i data-feather="github"></i>
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/om-patel-16m/" class="social-link" target="_blank">
+                <i data-feather="linkedin"></i>
+                LinkedIn
+            </a>
+            <a href="om_patel_technical_resume.pdf" class="social-link" target="_blank">
+                <i data-feather="file-text"></i>
+                Resume
+            </a>
+            <a href="index.html" class="social-link" aria-label="View Om Patel's ongoing research">
+                <i data-feather="home"></i>
+                Home
+            </a>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title animate">Ongoing Research</h2>
+        <div class="research-content animate">
+            <ul>
+                <li>
+                    <a href="research/datacompression.html" aria-label="View details on Data Compression for Inventory Data Optimization">
+                        Data Compression for Inventory Data Optimization
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <script>
+        feather.replace();
+        
+        // Add scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-title, .project-card, .tech-stack').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
