@@ -146,6 +146,50 @@
             border-radius: 20px;
             font-size: 0.9rem;
         }
+                /* Navigation Bar Styles */
+                .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            margin: 2rem auto;
+            width: fit-content;
+            animation: fadeIn 0.8s ease-out;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+
+        .navbar a {
+            position: relative;
+            text-decoration: none;
+            color: #2b2d42;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #4a4e69;
+            transition: width 0.3s ease;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        .navbar a:hover {
+            color: #4a4e69;
+        }
 
         /* Animations */
         @keyframes fadeIn {
@@ -175,26 +219,21 @@
 <body>
     <header class="header animate">
         <h1 class="name">Om Patel</h1>
-        <nav class="social-links">
-            <a href="https://github.com/omhpatel7" class="social-link" target="_blank">
-                <i data-feather="github"></i>
-                GitHub
+        <nav class="navbar animate">
+            <a href="https://github.com/omhpatel7" target="_blank" aria-label="GitHub">
+                <i data-feather="github"></i> GitHub
             </a>
-            <a href="https://www.linkedin.com/in/om-patel-16m/" class="social-link" target="_blank">
-                <i data-feather="linkedin"></i>
-                LinkedIn
+            <a href="https://www.linkedin.com/in/om-patel-16m/" target="_blank" aria-label="LinkedIn">
+                <i data-feather="linkedin"></i> LinkedIn
             </a>
-            <a href="om_patel_technical_resume.pdf" class="social-link" target="_blank">
-                <i data-feather="file-text"></i>
-                Resume
+            <a href="om_patel_technical_resume.pdf" target="_blank" aria-label="Resume">
+                <i data-feather="file-text"></i> Resume
             </a>
-            <a href="projects.html" class="social-link" aria-label="View Om Patel's ongoing projects">
-                <i data-feather="folder"></i>
-                Projects
+            <a href="projects.html" aria-label="Projects">
+                <i data-feather="folder"></i> Projects
             </a>
-            <a href="index.html" class="social-link" aria-label="View Om Patel's ongoing research">
-                <i data-feather="home"></i>
-                Home
+            <a href="index.html" aria-label="Home">
+                <i data-feather="home"></i> Home
             </a>
         </nav>
     </header>
