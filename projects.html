@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Patel | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            background: 
+                url('wallpaper.jpg') center/cover no-repeat;
+                
+        }
+
+        .name {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-family: 'Raleway', sans-serif, bold;
+            font-weight: 700;
+            background: linear-gradient(45deg, #2b2d42, #4a4e69);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #4a4e69;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #2b2d42;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #4a4e69;
+        }
+
+        /* Project Cards */
+        .projects-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .project-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tech-item {
+            background: #e9ecef;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .name {
+                font-size: 3rem;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<!-- For Raleway -->
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<body>
+    <header class="header animate">
+        <h1 class="name">Om Patel</h1>
+        <nav class="social-links">
+            <a href="https://github.com/omhpatel7" class="social-link" target="_blank">
+                <i data-feather="github"></i>
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/om-patel-16m/" class="social-link" target="_blank">
+                <i data-feather="linkedin"></i>
+                LinkedIn
+            </a>
+            <a href="om_patel_technical_resume.pdf" class="social-link" target="_blank">
+                <i data-feather="file-text"></i>
+                Resume
+            </a>
+            <a href="research.html" class="social-link" aria-label="View Om Patel's ongoing research">
+                <i data-feather="book"></i>
+                Research
+            </a>
+            <a href="index.html" class="social-link" aria-label="View Om Patel's ongoing research">
+                <i data-feather="home"></i>
+                Home
+            </a>
+        </nav>
+    </header>
+    
+    <section class="section">
+        <h2 class="section-title animate">Featured Projects</h2>
+        <div class="project-card animate">
+            <h3>Real-Time Pose Analysis System</h3>
+            <p class="project-description">A real-time human pose recognition and motion analysis platform that combines computer vision and machine learning. Capable of processing 30+ FPS video streams with 99% pose classification accuracy, the system delivers instant visual feedback and posture correction using joint angle estimation. It automatically analyzes over 10,000 frames using efficient sliding window algorithms, making it scalable for fitness coaching, rehabilitation monitoring, and interactive AI applications.</p>
+            <div class="tech-stack" style="margin-top: 1rem;">
+                <span class="tech-item">FastAPI</span>
+                <span class="tech-item">MediaPipe</span>
+                <span class="tech-item">OpenCV</span>
+                <span class="tech-item">NumPy</span>
+                <span class="tech-item">Pandas</span>
+                <span class="tech-item">TensorFlow</span>
+                <span class="tech-item">Scikit-learn</span>
+                <span class="tech-item">Flask</span>
+                <span class="tech-item">Matplotlib</span>
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Pytorch</span>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/McMasterAI2024-2025/formfit-macai" class="social-link">Code</a>
+            </div>
+        </div>
+        <div class="project-card animate">
+            <h3>GANHide: GAN-Based Steganography System</h3>
+            <p class="project-description">A deep learning–powered steganography system that hides binary messages within 8×8 grayscale digit images using conditional GANs (cGAN). The generated stego-images are visually indistinguishable from original inputs, achieving 50% discriminator accuracy—ideal for stealth. A custom CNN built with TensorFlow recovers hidden data with 97% training and 98% validation accuracy. The system also includes automated visual and statistical checks to ensure imperceptibility and message robustness across varying conditions.</p>
+            <div class="tech-stack" style="margin-top: 1rem;">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">TensorFlow</span>
+                <span class="tech-item">NumPy</span>
+                <span class="tech-item">Pandas</span>
+                <span class="tech-item">Matplotlib</span>
+                <span class="tech-item">Gan</span>
+                <span class="tech-item">CNN</span>
+                <span class="tech-item">Asana</span>
+                <span class="tech-item">Power BI</span>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/omhpatel7/ganHide/blob/main/CS_3ml3_Final_Report.pdf" class="social-link">Report</a>
+                <a href="https://github.com/omhpatel7/ganHide" class="social-link">Code</a>
+            </div>
+        </div>
+        <div class="project-card animate">
+            <h3>Algorithmic Maze Solver</h3>
+            <p class="project-description">A high-performance maze generation and solving tool built in C, combining algorithmic efficiency with visual clarity. It generates over 100 unique maze patterns in under 2 seconds using Prim’s algorithm and solves them using an optimized DFS with backtracking, reducing solution time by approximately 20% compared to brute-force approaches. Mazes are rendered as scalable SVG images for enhanced visualization, supporting clear display and access for up to 100 users concurrently.</p>
+            <div class="tech-stack" style="margin-top: 1rem;">
+                <span class="tech-item">C</span>
+                <span class="tech-item">DFS</span>
+                <span class="tech-item">SVG</span>
+                <span class="tech-item">libxml</span>
+                <span class="tech-item">Prim's Algorithm</span>
+                <span class="tech-item">Asana</span>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/omhpatel7/mazeSolver" class="social-link">Code</a>
+            </div>
+        </div>
+        <div class="project-card animate">
+            <h3>Sorting Algorithm Visualizer</h3>
+            <p class="project-description">An interactive Python tool that brings sorting algorithms to life through real-time visualizations using Pygame. This visualizer demonstrates the mechanics of popular algorithms—Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort—allowing users to observe how arrays are sorted step-by-step. Features include adjustable array sizes, speed control, and an intuitive interface, making it ideal for learning, teaching, or exploring algorithm behavior dynamically.</p>
+            <div class="tech-stack" style="margin-top: 1rem;">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Pygame</span>
+                <span class="tech-item">DSA</span>
+                <span class="tech-item">Visualization Techniques</span>
+                <span class="tech-item">User Interaction Handling</span>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/omhpatel7/Sorting-Algorithm-Visual/tree/main" class="social-link">Code</a>
+            </div>
+        </div>
+        <div class="project-card animate">
+            <h3>RC4 Encryption Library</h3>
+            <p class="project-description">A lightweight C library implementing the RC4 (Rivest Cipher 4) stream cipher, designed for fast and simple encryption and decryption. The project includes a modular implementation (rc4.c and rc4.h), a working demo that encrypts and decrypts a "Hello, World!" message, and a Makefile for easy compilation. The example showcases key generation, stream-based encryption, and secure hex output formatting—making it an ideal learning tool for understanding symmetric encryption.</p>
+            <div class="tech-stack" style="margin-top: 1rem;">
+                <span class="tech-item">C</span>
+                <span class="tech-item">Cryptography </span>
+                <span class="tech-item">Modular Code Design</span>
+                <span class="tech-item">Makefile</span>
+                <span class="tech-item">Hexadecimal Encoding</span>
+                <span class="tech-item">Random Key Generation</span>
+                <span class="tech-item">Asana</span>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/omhpatel7/encryptionLib" class="social-link">Code</a>
+            </div>
+        </div>
+        <div class="project-card animate">
+            <h3>CIFAR-100 Image Classification with ResNet</h3>
+            <p class="project-description">This project involves the development of a deep learning model to classify images from the CIFAR-100 dataset, which contains 100 classes of 32x32 color images. A custom ResNet architecture, incorporating residual blocks with convolutional layers, batch normalization, and LeakyReLU activation, was implemented using PyTorch. The model was trained on a GPU-enabled environment with data augmentation techniques like random flips, crops, and color jitter to enhance generalization.</p>
+            <div class="tech-stack" style="margin-top: 1rem;">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">PyTorch</span>
+                <span class="tech-item">Torchvision</span>
+                <span class="tech-item">NumPy</span>
+                <span class="tech-item">Pandas</span>
+                <span class="tech-item">Matplotlib</span>
+                <span class="tech-item">CUDA</span>
+                <span class="tech-item">PIL</span>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/omhpatel7/cifar-100-resnet/blob/main/report.pdf" class="social-link">Report</a>
+                <a href="https://github.com/omhpatel7/cifar-100-resnet/blob/main/kaggle.pdf" class="social-link">Kaggle Report</a>
+                <a href="https://github.com/omhpatel7/cifar-100-resnet" class="social-link">Code</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        feather.replace();
+        
+        // Add scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-title, .project-card, .tech-stack').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

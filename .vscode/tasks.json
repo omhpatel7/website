@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "/mnt/c/Users/omhpa/OneDrive/Desktop/website",
+			"problemMatcher": [],
+			"label": "Live Preview: Run Server"
+		}
+	]
+}
