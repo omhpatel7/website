@@ -4,15 +4,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = htmlspecialchars($_POST['email']);
   $message = htmlspecialchars($_POST['message']);
 
-  $to = "you@example.com";
-  $subject = "New Contact Form Submission";
-  $body = "Name: $name\nEmail: $email\nMessage:\n$message";
+  $to = "omhpatel7@gmail.com";  // Your email address
+  $subject = "New Form Submission from $name";
+  $body = "You received a new message:\n\n".
+          "Name: $name\n".
+          "Email: $email\n\n".
+          "Message:\n$message";
   $headers = "From: $email";
 
   if (mail($to, $subject, $body, $headers)) {
     echo "Message sent successfully!";
   } else {
-    echo "Message sending failed.";
+    echo "Message sending failed. Check server mail configuration.";
   }
 }
 ?>
