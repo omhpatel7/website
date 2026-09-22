@@ -1,327 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Patel | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-        /* Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        /* Header Styles */
-        .header {
-            text-align: center;
-            padding: 6rem 2rem 4rem;
-            background: 
-                url('wallpaper.jpg') center/cover no-repeat;
-                
-        }
-
-        .name {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            font-family: 'Raleway', sans-serif, bold;
-            font-weight: 700;
-            background: linear-gradient(45deg, #2b2d42, #4a4e69);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-            color: #4a4e69;
-            transition: color 0.3s ease;
-        }
-
-        .social-link:hover {
-            color: #2b2d42;
-        }
-
-        /* Sections */
-        .section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 50%;
-            height: 3px;
-            background: #4a4e69;
-        }
-
-        /* Project Cards */
-        .projects-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .project-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Tech Stack */
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .tech-item {
-            background: #e9ecef;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        /* Navigation Bar Styles */
-        .navbar {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 1rem 2rem;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            margin: 2rem auto;
-            width: fit-content;
-            animation: fadeIn 0.8s ease-out;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-        }
-
-        .navbar a {
-            position: relative;
-            text-decoration: none;
-            color: #2b2d42;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .navbar a::after {
-            content: "";
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background: #4a4e69;
-            transition: width 0.3s ease;
-        }
-
-        .navbar a:hover::after {
-            width: 100%;
-        }
-
-        .navbar a:hover {
-            color: #4a4e69;
-        }
-        .send-button {
-    padding: 0.6rem 1.5rem;
-    border: 2px solid #4a4e69;
-    background: transparent;
-    color: #4a4e69;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 8px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.send-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: #4a4e69;
-    transition: left 0.3s ease;
-    z-index: 0;
-}
-
-.send-button:hover::before {
-    left: 0;
-}
-
-.send-button:hover {
-    color: #fff;
-    border-color: #4a4e69;
-}
-
-.send-button span {
-    position: relative;
-    z-index: 1;
-}
-
-
-
-        
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate {
-            animation: fadeIn 0.6s ease forwards;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .name {
-                font-size: 3rem;
-            }
-            
-            .section {
-                padding: 3rem 1rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Om Patel — Computer Science student, cybersecurity analyst, and AI/ML developer.">
+  <title>Om Patel | Computer Science & Cybersecurity</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<!-- For Raleway -->
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 <body>
-    <header class="header animate">
-        <h1 class="name">Om Patel</h1>
-        <nav class="navbar animate">
-            <a href="https://github.com/omhpatel7" target="_blank" aria-label="GitHub">
-                <i data-feather="github"></i> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/om-patel-16m/" target="_blank" aria-label="LinkedIn">
-                <i data-feather="linkedin"></i> LinkedIn
-            </a>
-            <a href="om_patel_technical_resume.pdf" target="_blank" aria-label="Resume">
-                <i data-feather="file-text"></i> Resume
-            </a>
-            <a href="projects.html" aria-label="Projects">
-                <i data-feather="folder"></i> Projects
-            </a>
-            <a href="research.html" aria-label="Research">
-                <i data-feather="book"></i> Research
-            </a>
-        </nav>
-    </header>
-    <section class="section">
-        <h2 class="section-title animate">About Me</h2>
-        <p class="about-content animate">
-            Computer Science student and aspiring Cybersecurity Analyst with a focus on machine learning, computer vision, and algorithmic problem-solving. Proficient in Python, C, and frameworks like PyTorch and TensorFlow. I enjoy building innovative solutions, from real-time pose analysis systems to GAN-based steganography tools. In my downtime, I explore the latest trends in AI and cybersecurity or work on personal projects that challenge my skills. Passionate about using technology to solve real-world problems and always eager to learn and grow.
-        </p>
-    </section>
-    
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#home">OM<span>.</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <section class="section">
-        <h2 class="section-title animate">Tech Stack</h2>
-        <div class="tech-stack animate">
-            <span class="tech-item">Python</span>
-            <span class="tech-item">C</span>
-            <span class="tech-item">C++</span>
-            <span class="tech-item">Java</span>
-            <span class="tech-item">JavaScript</span>
-            <span class="tech-item">SQL</span>
-            <span class="tech-item">R</span>
-            <span class="tech-item">MATLAB</span>
-            <span class="tech-item">HTML</span>
-            <span class="tech-item">CSS</span>
-            <span class="tech-item">Bash</span>
-            <span class="tech-item">TensorFlow</span>
-            <span class="tech-item">PyTorch</span>
-            <span class="tech-item">Torchvision</span>
-            <span class="tech-item">NumPy</span>
-            <span class="tech-item">Pandas</span>
-            <span class="tech-item">OpenCV</span>
-            <span class="tech-item">Scikit-learn</span>
-            <span class="tech-item">MediaPipe</span>
-            <span class="tech-item">SciPy</span>
-            <span class="tech-item">Docker</span>
-            <span class="tech-item">Git</span>
-            <span class="tech-item">Wireshark</span>
-            <span class="tech-item">Apache Airflow</span>
-            <span class="tech-item">AWS</span>
-            <span class="tech-item">Power BI</span>
-            <span class="tech-item">Asana</span>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <div class="availability"><span></span> Computer Science · Cybersecurity · AI/ML</div>
+          <h1>Building secure,<br><em>intelligent</em> systems.</h1>
+          <p class="hero-intro">
+            I'm Om Patel, a Computer Science co-op student at McMaster University
+            with experience across cybersecurity, machine learning, data processing,
+            and software development.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#experience">Explore my work <span>↓</span></a>
+            <a class="btn btn-light" href="#contact">Let's connect ↗</a>
+          </div>
+          <div class="hero-meta">
+            <span>Kitchener, Ontario</span>
+            <span>McMaster University</span>
+            <span>Class of 2027</span>
+          </div>
         </div>
+
+        <div class="hero-visual">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+          <div class="visual-grid"></div>
+          <div class="terminal">
+            <div class="terminal-bar"><i></i><i></i><i></i><span>om@portfolio:~</span></div>
+            <div class="terminal-body">
+              <p><b>$</b> whoami</p>
+              <p class="accent">om_patel</p>
+              <p><b>$</b> focus --current</p>
+              <p>cybersecurity</p>
+              <p>machine-learning</p>
+              <p>software-engineering</p>
+              <p><b>$</b> status</p>
+              <p class="accent">building & learning_</p>
+            </div>
+          </div>
+          <div class="visual-label">01 / ENGINEER</div>
+        </div>
+      </div>
     </section>
 
-    <section class="section" id="contact">
-        <h2 class="section-title">Contact Me</h2>
-        <form action="https://formsubmit.co/a5abe36d66d14506e9044be40f2e0545" method="POST">
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <input type="text" name="name" placeholder="Your Name" required style="padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc;">
-                <input type="email" name="email" placeholder="Your Email" required style="padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc;">
-                <textarea name="message" rows="6" placeholder="Your Message" required style="padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-                <button type="submit" class="send-button"><span>Send</span></button>
-            
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-kicker">01 — About</div>
+        <div class="about-grid">
+          <h2>Software with a<br><span>purpose.</span></h2>
+          <div class="about-copy">
+            <p>
+              I enjoy working where software engineering meets data, security,
+              and intelligent systems. My experience includes automating large-scale
+              log analysis, building machine-learning pipelines, developing clinical
+              data-processing workflows, and supporting cybersecurity risk assessments.
+            </p>
+            <p>
+              I'm currently pursuing a B.A.Sc. Honours Computer Science (Co-op)
+              with a Minor in Statistics at McMaster University.
+            </p>
+          </div>
+        </div>
+        <div class="stats">
+          <div><strong>100GB+</strong><span>daily logs processed</span></div>
+          <div><strong>95%</strong><span>CNN accuracy</span></div>
+          <div><strong>40%</strong><span>faster security triage</span></div>
+          <div><strong>30 FPS</strong><span>real-time pose system</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-kicker">02 — Experience</div>
+        <div class="section-title-row">
+          <h2>Where I've<br><span>worked.</span></h2>
+          <p>Turning technical problems into measurable improvements.</p>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="experience-date">01/2026 — 08/2026</div>
+            <div class="experience-main">
+              <div class="role-line">
+                <h3>Cyber Security Analyst</h3>
+                <span>Government of Canada</span>
+              </div>
+              <p>Ottawa, Ontario</p>
+              <ul>
+                <li>Developed Python automation to parse, extract, and structure 100GB+ of daily network and system logs, cutting security triage time by 40%.</li>
+                <li>Built 10+ Linux shell scripts and diagnostic utilities, reducing manual health-check overhead by 25%.</li>
+                <li>Supported security risk assessments using ITSG-33 / ITSG-22 frameworks across 10+ network architectures and system interfaces.</li>
+              </ul>
+              <div class="chips"><span>Python</span><span>Linux</span><span>Bash</span><span>Cybersecurity</span><span>ITSG-33</span></div>
             </div>
-        </form>
-    </section>    
-</div>
+          </article>
 
-    <script>
-        feather.replace();
-        
-        // Add scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, { threshold: 0.1 });
+          <article class="experience-item">
+            <div class="experience-date">06/2025 — 08/2025</div>
+            <div class="experience-main">
+              <div class="role-line">
+                <h3>Quality Assurance Analyst</h3>
+                <span>Holland Bloorview Kids Rehabilitation Hospital</span>
+              </div>
+              <p>Toronto, Ontario</p>
+              <ul>
+                <li>Designed MATLAB data-processing pipelines for clinical motion-capture analysis, increasing processing throughput by 30%.</li>
+                <li>Integrated Visual3D and Cortex workflows for biomechanical analysis, improving consistency and reliability of motion-capture data.</li>
+                <li>Developed QA procedures and validation checks to maintain 100% data accuracy and data-integrity requirements.</li>
+              </ul>
+              <div class="chips"><span>MATLAB</span><span>Visual3D</span><span>Cortex</span><span>QA</span></div>
+            </div>
+          </article>
 
-        document.querySelectorAll('.section-title, .project-card, .tech-stack').forEach((el) => {
-            observer.observe(el);
-        });
-    </script>
+          <article class="experience-item">
+            <div class="experience-date">09/2024 — 04/2025</div>
+            <div class="experience-main">
+              <div class="role-line">
+                <h3>AI & ML Developer</h3>
+                <span>McMaster Artificial Intelligence Society</span>
+              </div>
+              <p>Hamilton, Ontario</p>
+              <ul>
+                <li>Optimized machine-learning pipelines through streamlined preprocessing and feature selection, reducing training time by 30%.</li>
+                <li>Developed a 12-layer CNN achieving 95% accuracy on a 50K+ image dataset while reducing inference time by 25%.</li>
+                <li>Integrated reinforcement-learning feedback into ML workflows to personalize user corrections, improving correction efficiency by 40%.</li>
+                <li>Containerized training and inference workflows with Docker for scalable CI/CD deployment.</li>
+              </ul>
+              <div class="chips"><span>PyTorch</span><span>TensorFlow</span><span>Docker</span><span>Python</span><span>Deep Learning</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-kicker">03 — Projects</div>
+        <div class="section-title-row">
+          <h2>Selected<br><span>projects.</span></h2>
+          <p>Hands-on work across computer vision, deep learning, and security.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-featured">
+            <div class="project-top"><span>01</span><span>DEEP LEARNING</span></div>
+            <div class="project-graphic resnet-graphic">
+              <div class="network-label">RESNET</div>
+              <div class="network-flow"><i></i><b>→</b><i></i><b>→</b><i></i><b>→</b><i></i></div>
+              <span>CIFAR-100</span>
+            </div>
+            <h3>CIFAR-100 ResNet</h3>
+            <p>A ResNet-based image classification project focused on training a deep-learning model for the CIFAR-100 dataset.</p>
+            <div class="chips"><span>Python</span><span>PyTorch</span><span>ResNet</span><span>CIFAR-100</span></div>
+            <a class="project-link" href="https://github.com/omhpatel7/cifar-100-resnet" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span>02</span><span>SECURITY / C</span></div>
+            <div class="project-graphic crypto-graphic">
+              <div class="lock">⌁</div>
+              <div class="crypto-lines"><span>KEY</span><span>RC4</span><span>DATA</span></div>
+            </div>
+            <h3>RC4 Encryption Library</h3>
+            <p>A C implementation of the RC4 stream cipher with initialization, keystream generation, encryption/decryption, and a Makefile-based example.</p>
+            <div class="chips"><span>C</span><span>RC4</span><span>Cryptography</span><span>Make</span></div>
+            <a class="project-link" href="https://github.com/omhpatel7/encryptionLib" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span>03</span><span>ALGORITHMS</span></div>
+            <div class="project-graphic maze-graphic">
+              <div class="maze-path"></div>
+              <span>PATH FOUND</span>
+            </div>
+            <h3>Maze Solver</h3>
+            <p>A maze-solving project focused on implementing path-finding logic and navigating a grid from a start point to a solution.</p>
+            <div class="chips"><span>Algorithms</span><span>Data Structures</span><span>Maze</span></div>
+            <a class="project-link" href="https://github.com/omhpatel7/mazeSolver" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span>04</span><span>COMPUTER VISION</span></div>
+            <div class="project-graphic pose-graphic">
+              <div class="skeleton">
+                <i class="joint j1"></i><i class="joint j2"></i><i class="joint j3"></i>
+                <i class="joint j4"></i><i class="joint j5"></i><i class="joint j6"></i>
+                <i class="joint j7"></i><i class="joint j8"></i><i class="joint j9"></i>
+              </div>
+              <span class="fps">30 FPS</span>
+            </div>
+            <h3>Real-Time Pose Analysis System</h3>
+            <p>Computer vision-powered physiotherapy exercise classifier providing real-time form feedback using OpenCV, MediaPipe, and machine-learning models.</p>
+            <div class="chips"><span>MediaPipe</span><span>OpenCV</span><span>Computer Vision</span><span>ML</span></div>
+            <a class="project-link" href="https://github.com/McMasterAI-Society/formfit-macai" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span>05</span><span>SECURITY / ML</span></div>
+            <div class="project-graphic gan-graphic">
+              <div class="pixel-grid"></div>
+              <div class="arrow">→</div>
+              <div class="pixel-grid small"></div>
+              <span>8-BIT</span>
+            </div>
+            <h3>GANHide</h3>
+            <p>cGAN-based steganography system that embeds 8-bit messages into 8×8 grayscale images and uses a CNN extractor for message recovery, achieving 97.07% extractor accuracy and 97.99% validation accuracy.</p>
+            <div class="chips"><span>TensorFlow</span><span>cGAN</span><span>CNN</span><span>Steganography</span></div>
+            <a class="project-link" href="https://github.com/omhpatel7/ganHide" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-kicker">04 — Skills</div>
+        <div class="skills-grid">
+          <div class="skills-intro">
+            <h2>Technical<br><span>toolkit.</span></h2>
+            <p>Tools and technologies I've worked with through coursework, projects, and professional experience.</p>
+          </div>
+          <div class="skill-columns">
+            <div><h3>Languages</h3><p>Python · C/C++ · Java · JavaScript · Bash · SQL · MATLAB · LUA</p></div>
+            <div><h3>ML / Data</h3><p>PyTorch · TensorFlow · Scikit-Learn · Pandas · NumPy · OpenCV · Apache Airflow</p></div>
+            <div><h3>Cloud / DevOps</h3><p>Docker · Git · GitHub · GitLab CI · AWS · GCP · Azure · REST</p></div>
+            <div><h3>Systems / Security</h3><p>Linux · Wireshark · Syslog · Shell Scripting · Cybersecurity · Parse</p></div>
+            <div><h3>Development</h3><p>HTML · CSS · SQLite · Visual Studio Code · Jupyter</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education">
+      <div class="container education-card">
+        <div class="section-kicker">05 — Education</div>
+        <div>
+          <h2>McMaster University</h2>
+          <p class="degree">B.A.Sc. Honours Computer Science (Co-op) · Minor in Statistics</p>
+          <p class="date">09/2022 — 04/2027 · Hamilton, Ontario</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-inner">
+        <div class="section-kicker">06 — Contact</div>
+        <h2>Let's connect<br><em>and build.</em></h2>
+        <p>Interested in software engineering, cybersecurity, AI/ML, or just want to say hello?</p>
+        <a class="email-link" href="mailto:omhpatel7@gmail.com">omhpatel7@gmail.com <span>↗</span></a>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/omhpatel7" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span id="year"></span> Om Patel</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
